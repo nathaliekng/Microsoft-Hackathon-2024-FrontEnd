@@ -5,7 +5,7 @@ import styles from "./Example.module.css";
 const DEFAULT_EXAMPLES: string[] = [
     "What are your strengths and weaknesses?",
     "Tell me about yourself",
-    "Write me a cover letter based off of my resume"
+    "Write a cover letter"
 ];
 
 const GPT4V_EXAMPLES: string[] = [
