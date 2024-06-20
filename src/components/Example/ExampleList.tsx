@@ -3,13 +3,13 @@ import { Example } from "./Example";
 import styles from "./Example.module.css";
 
 const DEFAULT_EXAMPLES: string[] = [
-    "What are you strengths and weaknesses?",
+    "What are your strengths and weaknesses?",
     "Tell me about yourself",
     "Write me a cover letter based off of my resume"
 ];
 
 const GPT4V_EXAMPLES: string[] = [
-    "What are you strengths and weaknesses?",
+    "What are your strengths and weaknesses?",
     "Tell me about yourself",
     "What are some of your proudest accomplishments?"
 ];
