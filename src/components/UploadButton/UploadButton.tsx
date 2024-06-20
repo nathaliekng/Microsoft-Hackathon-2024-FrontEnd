@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent, useRef, useEffect } from 'react';
 import axios from "axios";
 import pdfToText from 'react-pdftotext'
+import { BACKEND_URI } from '../../api/BACKEND_URI';
 
 const UploadButton: React.FC = () => {
     const [file, setFile] = useState<File | null>(null);
@@ -49,7 +50,7 @@ const UploadButton: React.FC = () => {
       
       useEffect(() => {
         if (resume && resume.resume) {
-          axios.post('http://localhost:3000/insert', resume, {
+          axios.post(BACKEND_URI+'/insert', resume, {
             onUploadProgress: (progressEvent) => {
               setProgress(prevState => ({
                 ...prevState,
