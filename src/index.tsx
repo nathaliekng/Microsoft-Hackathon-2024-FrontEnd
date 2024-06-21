@@ -31,12 +31,12 @@ window.onload = async () => {
             const response = await axios.get<SessionResponse>(BACKEND_URI+'/createSessionId');
             sessionID = response.data.sessionID;  // Adjust this based on your backend's response structure
             localStorage.setItem(sessionIDKey, sessionID);
-            console.log('New session ID fetched and stored:', sessionID);
+            //console.log('New session ID fetched and stored:', sessionID);
         } catch (error) {
             console.error('Error fetching session ID from the backend:', error);
         }
     } else {
-        console.log('Session ID already exists:', sessionID);
+        //console.log('Session ID already exists:', sessionID);
     }
 
 };

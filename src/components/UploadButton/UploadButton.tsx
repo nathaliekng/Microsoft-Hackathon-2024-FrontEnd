@@ -71,7 +71,7 @@ const UploadButton: React.FC = () => {
           })
           .then(res => {
             setMsg("Upload successful");
-            console.log(resume);
+            //console.log(resume);
             console.log(res.data);
             reset();
           })
