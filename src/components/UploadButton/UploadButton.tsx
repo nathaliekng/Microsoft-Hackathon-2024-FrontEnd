@@ -50,7 +50,15 @@ const UploadButton: React.FC = () => {
       
       useEffect(() => {
         if (resume && resume.resume) {
-          axios.post(BACKEND_URI+'/insert', resume, {
+          const sessionID = localStorage.getItem('sessionID'); // Get the sessionID from localStorage
+
+          if (!sessionID) {
+            console.error("No sessionID found in localStorage");
+            return;
+          }
+
+          const payload = { ...resume, sessionID };
+          axios.post(BACKEND_URI+'/insert', payload, {
             onUploadProgress: (progressEvent) => {
               setProgress(prevState => ({
                 ...prevState,

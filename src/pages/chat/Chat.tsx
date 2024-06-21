@@ -60,9 +60,10 @@ const Chat = () => {
         setActiveCitation(undefined);
 
         try {
+            const sessionID = localStorage.getItem('sessionID');
             const request: ChatAppRequest = {
                 prompt: question,
-                session_id: "1234" // TODO: Need to generate a session id
+                session_id: sessionID // TODO: Need to generate a session id
             };
 
             const response = await chatApi(request);

@@ -72,7 +72,7 @@ export type ChatAppRequestContext = {
 };
 
 export type ChatAppRequest = {
-    session_id: string;
+    session_id: string | null;
     prompt: string;
 };
 
